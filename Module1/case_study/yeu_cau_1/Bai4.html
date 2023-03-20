@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const h = parseInt(prompt("Height:  "));
+    for(let i = 1; i <= h; i++){
+        for(let k = h; k > i;k--){
+            document.write("&nbsp;&nbsp;");
+        }
+        for(let j = 1;j <= i * 2 - 1; j++){
+            if (i == 1 || i == h || j == 1 || j == i * 2 - 1){
+                document.write("*")
+            }else {
+                document.write("&nbsp;&nbsp;")
+            }
+        }
+        document.writeln("<br />");
+    }
+</script>
+</body>
+</html>

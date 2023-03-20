@@ -1,0 +1,203 @@
+{
+  "product": [
+    {
+      "id": 3,
+      "name": "asdsaasdasd",
+      "dateOfBirth": "2022-12-29",
+      "email": "cumeo123@gmail.com",
+      "phone": "090333333",
+      "manufacture": "12313123",
+      "category": "1"
+    },
+    {
+      "id": 5,
+      "name": "samsung1sss",
+      "dateOfBirth": "2022-12-29",
+      "email": "cumeo123@gmail.com",
+      "phone": "090333333",
+      "manufacture": "124124",
+      "category": "1"
+    },
+    {
+      "id": 6,
+      "name": "samsung1222",
+      "dateOfBirth": "2022-12-17",
+      "email": "cuquay311236@yahoo.com",
+      "phone": "090333333",
+      "manufacture": "samsung",
+      "category": "1"
+    },
+    {
+      "id": 6,
+      "name": "samsung1222",
+      "dateOfBirth": "2022-12-17",
+      "email": "cuquay311236@yahoo.com",
+      "phone": "090333333",
+      "manufacture": "samsung",
+      "category": "1"
+    },
+    {
+      "id": 6,
+      "name": "samsung1222",
+      "dateOfBirth": "2022-12-17",
+      "email": "cuquay311236@yahoo.com",
+      "phone": "090333333",
+      "manufacture": "samsung",
+      "category": "1"
+    },
+    {
+      "id": 6,
+      "name": "samsung1222",
+      "dateOfBirth": "2022-12-17",
+      "email": "cuquay311236@yahoo.com",
+      "phone": "090333333",
+      "manufacture": "samsung",
+      "category": "1"
+    },
+    {
+      "id": 7,
+      "name": "Apple",
+      "dateOfBirth": "2023-02-26",
+      "email": "cuquay76@yahoo.com",
+      "phone": "090333333",
+      "manufacture": "aaa",
+      "category": "2"
+    },
+    {
+      "id": 8,
+      "name": "Apple",
+      "dateOfBirth": "2023-02-19",
+      "email": "cuquay67@gmail.com",
+      "phone": "090333333",
+      "manufacture": "124124",
+      "category": "3"
+    }
+  ],
+  "khachhang": [
+    {
+      "id": 1,
+      "name": "khaingguyen111"
+    },
+    {
+      "id": 2,
+      "name": "tuan1111"
+    },
+    {
+      "id": 3,
+      "name": "samsung1"
+    },
+    {
+      "id": 4,
+      "name": "iphone3333"
+    },
+    {
+      "id": 5,
+      "name": "tuan"
+    },
+    {
+      "id": 6,
+      "name": "samsung1"
+    },
+    {
+      "id": 7,
+      "name": "samsung1"
+    },
+    {
+      "id": 8,
+      "name": "samsung1"
+    },
+    {
+      "id": 9,
+      "name": "iphone3"
+    }
+  ],
+  "sotietkiem": [
+    {
+      "id": 1,
+      "cusId": 1,
+      "ngaymoso": "2019-02-07",
+      "ngaygui": "2019-02-02",
+      "kyhan": 6,
+      "sotiengui": 10000,
+      "laixuat": 12222222,
+      "uudai": "asdasdasddddd"
+    },
+    {
+      "id": 2,
+      "cusId": 2,
+      "ngaymoso": "2023-01-05",
+      "ngaygui": "2022-12-10",
+      "kyhan": 2,
+      "sotiengui": 2,
+      "laixuat": 200000000,
+      "uudai": "asdasd"
+    },
+    {
+      "id": 2,
+      "cusId": "2",
+      "ngaymoso": "2023-01-05",
+      "ngaygui": "2022-12-10",
+      "kyhan": 2,
+      "sotiengui": 2,
+      "laixuat": 2,
+      "uudai": "asdasd"
+    },
+    {
+      "id": 5,
+      "cusId": 9,
+      "ngaymoso": "2022-12-30",
+      "ngaygui": "2023-01-06",
+      "kyhan": 7,
+      "sotiengui": 4,
+      "laixuat": 5,
+      "uudai": "asd"
+    }
+  ],
+  "SinhVien": [
+    {
+      "id": 1,
+      "name": "khai",
+      "tennhom": "1",
+      "tendetai": "khong co",
+      "giaovien": "2",
+      "email": "abd@gmail.com",
+      "sodienthoai": "0909993333"
+    },
+    {
+      "id": 2,
+      "name": "LeNgocTuan",
+      "tennhom": "2",
+      "tendetai": "khong co",
+      "giaovien": "2",
+      "email": "abd@gmail.com",
+      "sodienthoai": "0909993333"
+    },
+    {
+      "id": 3,
+      "name": "vuong",
+      "tennhom": "3",
+      "tendetai": "khong co",
+      "giaovien": "3",
+      "email": "abd@gmail.com",
+      "sodienthoai": "0909993333"
+    },
+    {
+      "id": 5,
+      "name": "luan12345",
+      "tennhom": "2",
+      "tendetai": "khong co",
+      "giaovien": "3",
+      "email": "abd@gmail.com",
+      "sodienthoai": "0909993333"
+    },
+    {
+      "id": 6,
+      "name": "@",
+      "tennhom": "2",
+      "tendetai": "khong co",
+      "giaovien": "3",
+      "email": "abd@gmail.com",
+      "sodienthoai": "0909993333"
+    }
+  ]
+}

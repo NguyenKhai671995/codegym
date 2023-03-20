@@ -1,0 +1,105 @@
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Create Form</p>
+
+                <form class="mx-1 mx-md-4" [formGroup]="formUpdate" (ngSubmit)="saveData()">
+                  <input type="number" name="id" hidden formControlName="id">
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example1c" class="form-control" formControlName="malohang" name="malohang"/>
+                      <label class="form-label" for="form3Example1c">malohang
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.malohang.touched) && formUpdate.controls.malohang.hasError('required') "> khong duoc trong </span>
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.malohang.touched) && formUpdate.controls.malohang.hasError('pattern') "> ten phai la LH-XXXX </span>
+
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">sanpham
+                      </label>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                              formControlName="sanpham" name="sanpham">
+                        <option value="" selected>chose</option>
+                        <option *ngFor="let c of listSanPham" value="{{c.id}}">{{c.sanpham}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="number" id="form3Example6c" class="form-control" formControlName="soluong" name="soluong"/>
+                      <label class="form-label" for="form3Example1c">soluong
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.soluong.touched) && formUpdate.controls.soluong.hasError('required') "> khong duoc trong </span>
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.soluong.touched) && formUpdate.controls.soluong.hasError('min') "> so luong lon hon 0 </span>
+
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="date" id="form3Example5c" class="form-control" formControlName="ngaynhap"
+                             name="ngaynhap"/>
+                      <label class="form-label" for="form3Example1c">ngaynhap
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.ngaynhap.touched) && formUpdate.controls.ngaynhap.hasError('required') "> is something!!! input your ngaynhap </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="date" id="form3Example4c" class="form-control" formControlName="ngaysanxuat"
+                             name="ngaysanxuat"/>
+                      <label class="form-label" for="form3Example1c">ngaysanxuat
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.ngaysanxuat.touched) && formUpdate.controls.ngaysanxuat.hasError('required') "> is something!!! input your ngaysanxuat </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="date" id="form3Example2c" class="form-control" formControlName="ngayhet"
+                             name="ngayhet"/>
+                      <label class="form-label" for="form3Example1c">ngayhet
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.ngayhet.touched) && formUpdate.controls.ngayhet.hasError('required') "> is something!!! input your ngayhet </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex btn-group justify-content-center mx-4 mb-3 mb-lg-4">
+
+                    <button type="submit" class="btn btn-primary btn-lg"  [disabled]="formUpdate.invalid" >Register
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg" (click)="buildForm()">Refresh</button>
+                    <button type="button" class="btn btn-primary btn-lg" routerLink="/product-list">BackList</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                     class="img-fluid" alt="Sample image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

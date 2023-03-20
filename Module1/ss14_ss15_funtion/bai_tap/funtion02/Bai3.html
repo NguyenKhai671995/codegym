@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhap So"));
+    
+    function factorial(numb) {
+        if (numb == 0) return 1;
+        if (numb == 1) return 1;
+        if (numb > 1) return numb * factorial(numb -1);
+    }
+    alert(factorial(a));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Cuoc Co ban"));
+    if (a > 10000) {
+        document.write("Cuoc Phat Sinh 10% <br>");
+        let total = a * 0.1 + a;
+        document.write("Tien Dien Thoai: " + total);
+    }else if (a> 5000){
+        document.write("Cuoc Phat Sinh 5% <br>");
+        let total = a * 0.05 + a ;
+        document.write("Tien Dien Thoai:" + total);
+    }else {
+        document.write("Khong Co Cuoc<br>");
+        let total = a ;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p >Menu: <span id="output1"></span></p>
+<script>
+    const product = ['Cafe' ,'Nước ép cà rốt','Nước ép cà chua','sting', 'Nước lọc', 'Nước dừa'];
+    const price = ["10", "15", "15", "7", "20"];
+    let menu = "" ;
+    let bill = 0;
+    do {
+        let idx = parseInt(prompt(`1.Cafe
+2.Nước ép cà rốt
+3.Nước ép cà chua
+4.Sting
+5.Nước lọc
+6.Nước dừa
+7.Exit`));
+        if (idx == 0){
+            continue;
+        }
+        if(idx >= 7){
+            break;
+        }
+        let numb = parseInt(prompt(product[idx -1] + " với giá: " + price[idx -1] + " Bạn muốn mua bao nhiêu: "))
+        bill += numb * price[idx - 1];
+        menu += "Thức uông bạn gọi là: " + product[idx -1] + "</br> số lương: " + numb + "</br> Với số tiền: " + (numb * price[idx -1]);
+        document.getElementById("output1").innerHTML = menu ;
+    } while (true)
+    alert("Tổng bill là: " + bill);
+
+</script>
+</body>
+</html>

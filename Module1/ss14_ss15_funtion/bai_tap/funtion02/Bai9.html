@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrInt = new Array(7);
+    let str = "Chuoi so: ";
+    for (let i = 0 ; i < arrInt.length; i++){
+        arrInt[i] = prompt("input element:");
+        str +=  arrInt[i] + ", " ;
+    }
+    document.write(str + "</br>");
+
+    let a = prompt("Input a");
+
+    function test(arrInt,a) {
+        let count = 0 ;
+        for (let i = 0 ; i < arrInt.length ; i++){
+            if ( a == arrInt[i]) {
+                count++;
+            }
+        }if (count == 0){
+            return -1;
+        }else return count ;
+    }
+    document.write("So nhap vao: " + a + "</br>");
+    document.write("So Lan Lap: " + test(arrInt,a));
+
+
+</script>
+</body>
+</html>

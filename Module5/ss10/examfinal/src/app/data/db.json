@@ -1,0 +1,70 @@
+{
+  "LoHang": [
+    {
+      "id": 2,
+      "malohang": "LH-002",
+      "soluong": 4,
+      "sanpham": "2",
+      "ngaynhap": "12-12-2019",
+      "ngaysanxuat": "12-12-2019",
+      "ngayhet": "12-12-2019"
+    },
+    {
+      "id": 3,
+      "malohang": "LH-003",
+      "soluong": 1,
+      "sanpham": "3",
+      "ngaynhap": "12-12-2019",
+      "ngaysanxuat": "12-12-2019",
+      "ngayhet": "12-12-2019"
+    },
+    {
+      "id": 4,
+      "malohang": "LH-004",
+      "soluong": 3,
+      "sanpham": "4",
+      "ngaynhap": "12-12-2019",
+      "ngaysanxuat": "12-12-2019",
+      "ngayhet": "12-12-2019"
+    },
+    {
+      "id": 5,
+      "malohang": "LH-3232",
+      "sanpham": "1",
+      "soluong": 12,
+      "ngaynhap": "2023-03-11",
+      "ngaysanxuat": "2023-03-31",
+      "ngayhet": "2023-03-31"
+    }
+  ],
+  "SanPham": [
+    {
+      "id": 1,
+      "sanpham": "coca",
+      "xuatxu": "my",
+      "giatien": 1000,
+      "donvi": "thung"
+    },
+    {
+      "id": 2,
+      "sanpham": "tiger",
+      "xuatxu": "viet",
+      "giatien": 1000,
+      "donvi": "thung"
+    },
+    {
+      "id": 3,
+      "sanpham": "tra da",
+      "xuatxu": "trung",
+      "giatien": 1000,
+      "donvi": "thung"
+    },
+    {
+      "id": 4,
+      "sanpham": "cafe",
+      "xuatxu": "nhat",
+      "giatien": 1000,
+      "donvi": "thung"
+    }
+  ]
+}

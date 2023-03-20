@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrInt = new Array(5);
+    let str = "Chuoi so: ";
+    for (let i =0 ; i < arrInt.length; i++){
+        arrInt[i] = parseInt(prompt("input element:"));
+        str +=  arrInt[i] + ", " ;
+    }
+    document.write(str);
+    function reverse(num){
+        return arrInt.reverse();
+    }
+    alert(reverse(arrInt))
+
+</script>
+</body>
+</html>

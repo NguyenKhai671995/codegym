@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhap So Tien"));
+    if (a > 10000) {
+        document.write("hoa hong la 10% <br>");
+        let total = a * 0.1 ;
+        document.write("So Tien Nhan: " + total);
+    }else if (a> 5000){
+        document.write("hoa hong la 5% <br>");
+        let total = a * 0.05 ;
+        document.write("So Tien Nhan:" + total);
+    }else {
+        document.write("khong co hoa hong");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập số a: <input type="text" id="a" value=""/> <br/>
+    Nhập số b: <input type="text" id="b" value=""/> <br/>
+    Nhập số c: <input type="number" id="c" value=""/> <br/>
+    <p id="d"></p> <br>
+    <input type="button"  value="NghiemPT" onclick="giaiPt()"/>
+</form>
+<script>
+    function giaiPt() {
+        let a = document.getElementById("a").value;
+        parseInt(a);
+        console.log(a);
+        let b = document.getElementById("b").value;
+        parseInt(b);
+        let c = document.getElementById("c").value;
+        parseInt(c);
+        let delta = Math.pow(b,2) - 4 * a *c ;
+
+        if (a == "" || b == "" || c == "") {
+            document.getElementById("d").innerText = "Vui Long Nhap Du lieu";
+        } else if(delta < 0){
+            document.getElementById("d").innerText = "pt vo nghiem"
+        }
+        else if (delta == 0){
+            let x = +- b / (2*a) ;
+            document.getElementById("d").innerText = "pt co nghiem  kep x: " + x ;
+        }else {
+            let x1 = (-b + Math.sqrt(delta))/ 2*a;
+            let x2 = (-b - Math.sqrt(delta))/ 2*a;
+            document.getElementById("d").innerText = "pt co 2 nghiem x1=: " + x1 + "x2= " + x2 ;
+        }
+    }
+</script>
+</body>
+</html>

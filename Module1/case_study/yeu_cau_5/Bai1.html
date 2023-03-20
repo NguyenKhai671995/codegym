@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = new Array() ;
+    let m = parseInt(prompt("input m"));
+    let n = parseInt(prompt("input n"));
+    for (let i = 0; i < m ; i++){
+        numb[i] = new Array() ;
+        for (let j = 0; j < n; j++){
+            numb[i][j] = parseInt(prompt("input element"));
+        }
+    }
+    function sumNumb(numb) {
+        let sum = 0;
+        for (let i = 0; i < numb.length; i++){
+            for (let j = 0; j < numb[i].length; j++){
+                if(numb[i][j] % 2 == 0){
+                    sum += numb[i][j];
+                }
+            }
+        }
+        return sum ;
+    }
+    console.table(numb);
+    console.log(sumNumb(numb));
+
+
+
+
+
+</script>
+</body>
+</html>

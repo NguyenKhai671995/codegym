@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNum = new Array(10);
+    let str = "Chuoi So: "
+    for(let  i = 0 ; i< arrNum.length; i++){
+        arrNum[i] = parseInt(prompt("Input Number: "));
+        str += arrNum[i] + ", ";
+    }
+    document.write(str);
+    document.write("</br>");
+    arrNum.sort((a,b) => b - a);
+    document.write("Chuon Giam Dan: " + arrNum);
+
+</script>
+</body>
+</html>

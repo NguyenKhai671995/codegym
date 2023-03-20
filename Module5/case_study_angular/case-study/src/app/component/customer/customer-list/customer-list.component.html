@@ -1,0 +1,61 @@
+
+<div class="table-responsive">
+  <table class="table table-primary">
+    <thead>
+    <tr>
+      <td>STT</td>
+      <th>Name</th>
+      <th>Date of birth</th>
+      <th>Gender</th>
+      <th>Id card</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Customer type</th>
+      <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers;index as i">
+      <td>{{i + 1}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.birthday}}</td>
+      <td>{{customer.gender}}</td>
+
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.customerType}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(customer)">
+          delete
+        </button>
+        <button type="button" class="btn btn-danger" [routerLink]="['/customer/customer-edit',customer.id]">edit</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        delete {{customerSelect.name}} ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteThis(customerSelect.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="btn btn-success btn-lg mb-1" routerLink="/customer/customer-create">
+  Create
+</button>

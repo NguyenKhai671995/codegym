@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const isPrime = (numb) => {
+        if (numb <= 1) return false;
+        if (numb == 2) return true;
+
+        for (let n = 2; n <= Math.sqrt(numb); n++) {
+            if (numb % n == 0) return false;
+        }
+
+        return true;
+    }
+    let numbOfPrime = parseInt(prompt("Count ?", ''));
+    let i = 0;
+    let str = "";
+    while (numbOfPrime > 0) {
+        i++;
+        if (isPrime(i)) {
+            numbOfPrime--;
+            str += `${i}, `
+        }
+    }
+    document.write(str);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ss6_inheritance.bai_tap.CircleCylinder</OriginalElement>
+  <nodes>
+    <node x="266.0" y="0.0">ss6_inheritance.bai_tap.CircleCylinder.Main</node>
+    <node x="-30.0" y="-63.0">ss6_inheritance.bai_tap.CircleCylinder.Cylinder</node>
+    <node x="-301.5" y="-53.0">ss6_inheritance.bai_tap.CircleCylinder.Circle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ss6_inheritance.bai_tap.CircleCylinder.Cylinder" target="ss6_inheritance.bai_tap.CircleCylinder.Circle">
+      <point x="0.0" y="-212.0" />
+      <point x="0.0" y="179.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="118.5" y="137.0" />
+  <SelectedNodes>
+    <node>ss6_inheritance.bai_tap.CircleCylinder.Cylinder</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

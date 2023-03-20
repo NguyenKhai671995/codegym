@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array(7);
+    let str = "Chuoi so: ";
+    for (let i =0 ; i < array.length; i++){
+        array[i] = prompt("input element:");
+        str +=  array[i] + ", " ;
+    }
+    document.write(str);
+
+
+    let countNumb = 0;
+    let countText = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length - 1; j++) {
+            typeof array[i][j] == "number" ? countNumb++: countText++;
+        }
+    }
+    console.log(countNumb);
+    console.log(countText);
+
+
+</script>
+</body>
+</html>

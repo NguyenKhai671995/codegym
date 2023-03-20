@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SELECT ></SELECT>
+<script>
+    let str = prompt("Nhap str");
+    let newStr = str.split(" ");
+    console.log(str.split(" "));
+    function cutStr(str) {
+        let ans = "";
+        for(value of str){
+            if (value == ""){
+                continue;
+            }
+             ans += value.charAt(0).toUpperCase() + value.substring(1).toLowerCase() + " ";
+        }
+        return ans ;
+    }
+    console.log(cutStr(newStr));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Chuyển từ m sang ft. Nhập m = <input type="number" id="input1" name="input1"></p>
+<p> Ft = <span id="output1"></span></p>
+<script>
+    let a = document.getElementById("input1");
+    a.addEventListener("keyup", cFution);
+    function cFution() {
+        let m = parseInt(a.value) * 3.2808;
+        document.getElementById("output1").innerHTML = m ;
+    }
+</script>
+</body>
+</html>

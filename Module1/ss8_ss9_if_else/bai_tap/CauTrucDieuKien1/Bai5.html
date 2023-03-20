@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kt = parseInt(prompt("nhap diem kt"));
+    let midTerm = parseInt(prompt("nhap diem giua ky"));
+    let lastTeam = parseInt(prompt("nhap diem cuoi ky"));
+    if (kt > 10 || midTerm > 10 || lastTeam > 10 ){
+        alert("nhap lai diem nho hon 10")
+    }else {
+        let avg = (kt + midTerm + lastTeam) / 3
+        let output1 = (avg > 9) ? "hoc sinh gioi" : avg > 7 ? "hoc sinh kha" : "hoc sinh yeu";
+        document.write(output1);
+    }
+</script>
+</body>
+</html>

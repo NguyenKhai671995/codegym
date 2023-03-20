@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let arrConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+
+    let a = prompt("Nhap ten ngoi sao: ")
+    function change() {
+        let result = "";
+        let index = arrStar.indexOf(a);
+        if(index != -1){
+            result = arrConstellation[index];
+        }else {
+            result = "Not found...";
+        }
+        return result
+    }
+    alert(change(a));
+
+
+</script>
+</body>
+</html>

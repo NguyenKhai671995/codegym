@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrInt = new Array(7);
+    let str = "Chuoi so: ";
+    for (let i =0 ; i < arrInt.length; i++){
+        arrInt[i] = parseInt(prompt("input element:"));
+        str +=  arrInt[i] + ", " ;
+    }
+    document.write(str);
+    document.write("</br>")
+    let max = 1 ;
+    for (let i = 0 ; i <arrInt.length; i++){
+        if (max < arrInt[i]){
+            max = arrInt[i];
+        }
+    }
+    let index = arrInt.indexOf(max);
+
+    document.write("So lon Nhat: "+ max + " o vi tri: " + index );
+</script>
+</body>
+</html>

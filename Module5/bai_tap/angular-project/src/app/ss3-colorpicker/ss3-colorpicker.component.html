@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-primary" (click)="changeColor('primary')">Primary</button>
+<button type="button" class="btn btn-secondary" (click)="changeColor('Secondary')">Secondary</button>
+<button type="button" class="btn btn-success" (click)="changeColor('Success')">Success</button>
+<button type="button" class="btn btn-danger" (click)="changeColor('Danger')">Danger</button>
+<button type="button" class="btn btn-warning" (click)="changeColor('Warning')">Warning</button>
+<button type="button" class="btn btn-info" (click)="changeColor('info')">Info</button>
+<button type="button" class="btn btn-light" (click)="changeColor('Light')">Light</button>
+<button type="button" class="btn btn-dark" (click)="changeColor('Dark')">Dark</button>
+<div class="container">
+  <div class="col-1"></div>
+
+  <div  class="result col-10" [style.background-color]="backgroundNew">
+    <span [style.color]="colorNew">Color New</span>
+
+  </div>
+
+
+  <div class="col-1"></div>
+</div>
+
+
+
+
+

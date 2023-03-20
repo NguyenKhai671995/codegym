@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let a = 0
+   do {
+       a = parseInt(prompt("Nhap Nhiet Do"));
+       if (a>100){
+           alert("Giam Nhiet Do.");
+       }else if(a<20){
+           alert("Tang Nhiet Do.");
+       }else {
+           document.write("Nhiet Do Binh Thuong: " + a);
+           break;
+       }
+   }while (true);
+   /*let a = 0
+   do {
+       a = parseInt(prompt("Nhap Nhiet Do"));
+       if (a>100){
+           alert("Giam Nhiet Do.");
+       }else if(a<20){
+           alert("Tang Nhiet Do.");
+       }else {
+           document.write("Nhiet Do Binh Thuong: " + a);
+
+       }
+   }while (a<100 || a>20);
+    */
+</script>
+</body>
+</html>

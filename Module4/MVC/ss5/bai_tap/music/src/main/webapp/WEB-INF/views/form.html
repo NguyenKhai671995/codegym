@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{${link}}" method="post" th:object="${music}">
+    <div th:if="${link == '/create'}">
+<!--        id: <input th:field="*{id}" ><br>-->
+    </div>
+    <div th:if="${link == '/edit'}">
+<!--        id: <input th:field="*{id}" readonly><br>-->
+    </div>
+    Name: <input th:field="*{name}"><br>
+    singer: <input th:field="*{singer}"><br>
+    category: <input th:field="*{category}"><br>
+    file: <input th:field="*{file}"><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+    const SIZE = parseInt(prompt("Nhap do dai mang"));
+    for (let i = 0; i < SIZE; i++){
+        numerators[i] = parseInt(prompt("Nhap tu so"));
+        denominators[i] = parseInt(prompt("Nhap mau so"));
+    }
+    function maxFraction(arr1, arr2) {
+        let MAX = -4444444;
+        for (let i = 0; i < arr1.length; i++) {
+            if (MAX < arr1[i] / arr2[i]) {
+                MAX = arr1[i] / arr2[i];
+            }
+        }
+        console.log(Math.ceil(MAX));
+        return Math.ceil(MAX);
+    }
+    maxFraction(numerators, denominators);
+
+
+</script>
+</body>
+</html>

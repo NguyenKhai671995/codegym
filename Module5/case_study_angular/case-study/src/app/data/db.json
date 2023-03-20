@@ -1,0 +1,190 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "customerName": "Tuấn Lê",
+      "birthday": "1990/04/14",
+      "gender": "name",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": 4,
+      "address": "dien bien phu"
+    },
+    {
+      "id": 2,
+      "customerName": "dat",
+      "birthday": "1990/04/14",
+      "gender": "name",
+      "idCard": "asd",
+      "phone": "0766754226",
+      "email": "cumeo123@gmail.com",
+      "customerType": 3,
+      "address": "dien bien phu"
+    },
+    {
+      "id": 3,
+      "customerName": "asd",
+      "birthday": "2022-12-17",
+      "gender": "asd",
+      "idCard": "asd",
+      "phone": "asd",
+      "email": "sd",
+      "customerType": 1,
+      "address": "da nang"
+    },
+    {
+      "id": 4,
+      "customerName": "duyetngudot",
+      "birthday": "2021-10-02",
+      "gender": "nu",
+      "idCard": "kh09912",
+      "phone": "0766754226",
+      "email": "abd@gmail.com",
+      "customerType": "2",
+      "address": "da nang"
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "gold"
+    },
+    {
+      "id": 4,
+      "name": "silver"
+    },
+    {
+      "id": 5,
+      "name": "member"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Tuan",
+      "birthday": "1995-10-05",
+      "idCard": "12312398980",
+      "salary": "123",
+      "phoneNumber": "0905872269",
+      "email": "giothoitb7@yahoo.com",
+      "address": "K69/8 Lý Thái Tổ ",
+      "positionEmployee": 1,
+      "education": 2,
+      "division": "2"
+    },
+    {
+      "id": 2,
+      "name": "asd",
+      "birthday": "2022-12-16",
+      "idCard": "asd",
+      "salary": "322",
+      "phoneNumber": "4531233363",
+      "email": "taikuto@gmail.com",
+      "address": "asdsad",
+      "positionEmployee": "1",
+      "education": "2",
+      "division": "3"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "nameService": "Villa super Vip 11",
+      "area": 200,
+      "cost": 10,
+      "maxPeople": 5,
+      "standardRoom": "Vip",
+      "descriptionOtherConvenience": "vip",
+      "areaPool": 200,
+      "numberOfFloors": 2,
+      "freeService": "ssssss",
+      "rentType": 1,
+      "facilityType": 1
+    },
+    {
+      "id": 2,
+      "nameService": "ádasd",
+      "area": 123,
+      "cost": 123,
+      "maxPeople": "12312",
+      "standardRoom": "zxxzczxc",
+      "descriptionOtherConvenience": "ccccccccc",
+      "areaPool": 123,
+      "numberOfFloors": 12,
+      "freeService": "zxczxcxzc",
+      "rentType": "1",
+      "facilityType": "2"
+    },
+    {
+      "id": 3,
+      "nameService": "duyetngu",
+      "area": 232,
+      "cost": 213123,
+      "maxPeople": "23213",
+      "standardRoom": "123",
+      "descriptionOtherConvenience": null,
+      "areaPool": 123,
+      "numberOfFloors": 213,
+      "freeService": "adsa",
+      "rentType": "3",
+      "facilityType": "1"
+    },
+    {
+      "id": 4,
+      "nameService": "kjkjkj",
+      "area": 9999,
+      "cost": 77,
+      "maxPeople": "87",
+      "standardRoom": "lkl",
+      "descriptionOtherConvenience": "eseddd",
+      "areaPool": 6,
+      "numberOfFloors": 99,
+      "freeService": "ko",
+      "rentType": "2",
+      "facilityType": "1"
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "customer": "1",
+      "facility": "1",
+      "dateIn": "2002-10-05",
+      "dateOut": "2002-12-05",
+      "deposit": 100000
+    },
+    {
+      "id": 2,
+      "customer": "3",
+      "facility": "1",
+      "dateIn": "2023-02-18",
+      "dateOut": "2023-02-25",
+      "deposit": 10000
+    },
+    {
+      "id": 6,
+      "customer": "1",
+      "facility": "1",
+      "dateIn": "2023-02-24",
+      "dateOut": "2023-03-31",
+      "deposit": 0
+    },
+    {
+      "id": 7,
+      "customer": "1",
+      "facility": "2",
+      "dateIn": "2023-03-10",
+      "dateOut": "2023-04-01",
+      "deposit": 78
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrInt = new Array(10);
+    for (let i =0 ; i < arrInt.length; i++){
+        arrInt[i] = parseInt(prompt("input element:"));
+    }
+    let inputV = parseInt(prompt("input V:"));
+    let flg = false;
+    for (let i = 0; i < arrInt.length; i++) {
+        if (inputV == arrInt[i]) {
+            document.write("V is in the array");
+            flg = true;
+            break;
+        }
+    }
+    if (flg != true) {
+        document.write("V is NOT in the array");
+    }
+
+
+</script>
+</body>
+</html>

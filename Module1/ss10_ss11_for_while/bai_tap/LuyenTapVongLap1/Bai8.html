@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhap So Be"));
+    let b = parseInt(prompt("Nhap So Lon"));
+    let random = Math.floor(Math.random() * (b - a + 1) + a);
+    let dem = 0;
+    do {
+        let i = parseInt(prompt("Nhap so ma ban doan: "));
+        if (random == i) {
+            alert("Chuc mung ban!");
+            break
+        } else if (random > i) {
+            alert("so ban nhap nho hơn.");
+            dem++;
+        } else {
+            alert("so ban nhap lon hơn.");
+            dem++;
+        }
+        if (dem >= 3){
+            alert("Ban da het luot choi.")
+            break
+        }
+    } while (true);
+
+</script>
+</body>
+</html>

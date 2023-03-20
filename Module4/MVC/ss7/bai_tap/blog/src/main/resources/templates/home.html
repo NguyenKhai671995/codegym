@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Produce</title>
+</head>
+<body>
+<p style="color: red" th:text="${message}">
+</p>
+<form method="get" action="/search">
+    <input type="text" name="search" placeholder="input name search">
+    <button type="submit">Search</button>
+</form>
+<form method="get" action="/">
+    <button type="submit">Refresh</button>
+</form>
+<form method="get" action="/create">
+    <button type="submit">Create</button>
+</form>
+
+<table>
+    <tr>
+        <th>No.</th>
+        <th>ID</th>
+        <th>title</th>
+        <th>content</th>
+        <th>date</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="item,loop : ${list}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.title}"></td>
+        <td th:text="${item.content}"></td>
+        <td th:text="${item.createDay}"></td>
+        <td th:text="${item.category.name}"></td>
+        <td>
+            <a style="text-decoration: none" th:href="@{/edit/{id}(id = ${item.id})}">
+                <button>Edit</button>
+            </a>
+            <a th:href="@{/delete/{id}(id = ${item.id})}">
+                <button>Delete</button>
+            </a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

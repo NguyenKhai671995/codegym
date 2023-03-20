@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = parseInt(prompt("inputArray: "));
+    let numbers1 = new Array(array);
+    for (let i = 0; i < numbers1.length ; i++){
+        numbers1[i] = parseInt(prompt("input number1"));
+    }
+    let numbers2 = new Array(array);
+    for (let i = 0; i < numbers2.length ; i++){
+        numbers2[i] = parseInt(prompt("input number2"));
+    }
+    let checkArray = [];
+
+    function checkNumber() {
+        for (value of numbers2) {
+            if (!numbers1.includes(value) && !(checkArray.includes(value))) {
+                checkArray.push(value);
+            }
+        }
+        return checkArray;
+    }
+
+    document.write("Missing " + checkNumber())
+</script>
+</body>
+</html>

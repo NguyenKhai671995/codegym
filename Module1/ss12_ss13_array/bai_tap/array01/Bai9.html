@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNum1 = new Array(5);
+    let str1 = "Chuoi So1: "
+    for(let  i = 0 ; i< arrNum1.length; i++){
+        arrNum1[i] = parseInt(prompt("Input Number1: "));
+        str1 += arrNum1[i] + ", ";
+    }
+    document.write(str1);
+    document.write("</br>");
+    let arrNum2 = new Array(5);
+    let str2 = "Chuoi So2: "
+    for(let  i = 0 ; i< arrNum2.length; i++){
+        arrNum2[i] = parseInt(prompt("Input Number2: "));
+        str2 += arrNum2[i] + ", ";
+    }document.write(str2);
+    document.write("</br>");
+
+    let c = arrNum1.concat(arrNum2);
+
+    document.write("Chuoi Moi: " + c);
+
+
+</script>
+</body>
+</html>

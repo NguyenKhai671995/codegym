@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/update}" method="post" th:object="${music}">
+
+   <p th:hidden="*{id == null}"> id: <input th:field="*{id}" th:readonly="*{id != null}" ></p>
+    Name: <input th:field="*{name}"><br>
+    <p style="color: red" th:errors="*{name}"></p><br>
+    singer: <input th:field="*{singer}"><br>
+    <p style="color: red" th:errors="*{singer}"></p><br>
+    Category: <select th:field="*{category}">
+                <option th:each="item:${list}" th:value="${item.id} " th:text="${item.name}">
+                </option>
+              </select>
+    <br>
+    <p style="color: red" th:errors="*{category}"></p><br>
+    link: <input th:field="*{link}"><br>
+    date: <input type="date" th:field="*{date}"><br>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

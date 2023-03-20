@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> Chuỗi Số <span id="list-numbs"></span></p>
+    <p> Average is <span id="average-array"></span></p>
+    <p> <button onclick="averageArray()">Average</button></p>
+<script>
+    let array = new Array();
+    let MAX = 10;
+
+    for (let i = 0; i < MAX; i++) {
+        array[i] = parseInt(prompt("insert element"));
+        document.getElementById("list-numbs").innerHTML += array[i] + ", ";
+    }
+    function averageArray() {
+        let sumArray = 0;
+        for (let i = 0; i < array.length; i++) {
+            sumArray += array[i]
+        }
+        let aveArray = (sumArray) / MAX;
+        document.getElementById("average-array").innerHTML = aveArray;
+    }
+</script>
+</body>
+</html>

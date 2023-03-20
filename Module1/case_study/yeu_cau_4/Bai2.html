@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhap string");
+    function differentSymbolsNaive(str){
+        let result = [];
+        for(let i = 0; i< str.length; i++){
+            if(!(result.includes(str[i]))){
+                result.push(str[i]);
+            }
+        }
+        return result ;
+    }
+    let ans = differentSymbolsNaive(str)
+    alert(ans.length);
+   document.write(`${ans.length} so ki tu khac nhau la: ${ans}`)
+
+</script>
+</body>
+</html>

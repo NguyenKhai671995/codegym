@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/facility/update}" method="post" th:object="${facility}">
+  <input th:field="*{id}" hidden><br>
+    Name: <input th:field="*{name}"><br>
+    <p style="color: red" th:errors="*{name}"></p><br>
+
+    area: <input th:field="*{area}"><br>
+    <p style="color: red" th:errors="*{area}"></p><br>
+<!--    gender: <input th:field="*{gender}" type="radio" value="1" th:text="Nam" th:checked="${customer.gender == true}">-->
+<!--             <input th:field="*{gender}" type="radio" value="0" th:text="Nu" th:checked="${customer.gender == false}"><br>-->
+<!--    <p style="color: red" th:errors="*{gender}"></p><br>-->
+    cost: <input th:field="*{cost}"><br>
+    <p style="color: red" th:errors="*{cost}"></p><br>
+
+    maxPeople: <input th:field="*{maxPeople}"><br>
+    <p style="color: red" th:errors="*{maxPeople}"></p><br>
+
+    facilityType:   <select th:field="*{facilityType}">
+                    <option th:each="item:${facilityTypeList}" th:value="${item.id} " th:text="${item.name}">
+                    </option>
+                    </select>
+    <br>
+
+    rentType:       <select th:field="*{rentType}">
+                    <option th:each="item:${renList}" th:value="${item.id} " th:text="${item.name}">
+                    </option>
+                    </select>
+    <br>
+
+    standardRoom: <input th:field="*{standardRoom}"><br>
+    <p style="color: red" th:errors="*{standardRoom}"></p><br>
+
+    description: <input th:field="*{description}"><br>
+    <p style="color: red" th:errors="*{description}"></p><br>
+
+    poolArea: <input th:field="*{poolArea}"><br>
+    <p style="color: red" th:errors="*{poolArea}"></p><br>
+
+    NumberOfFloors: <input th:field="*{NumberOfFloors}"><br>
+    <p style="color: red" th:errors="*{NumberOfFloors}"></p><br>
+
+    facilityFree: <input th:field="*{facilityFree}"><br>
+    <p style="color: red" th:errors="*{facilityFree}"></p><br>
+
+    <input th:field="*{status}" hidden >
+    <button type="submit">Submit</button>
+
+    <a href="/facility">
+    <button type="button">Back list</button>
+    </a>
+
+</form>
+</body>
+</html>

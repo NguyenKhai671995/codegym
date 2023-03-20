@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Mang: <span id="output1"></span></p>
+<p>Cac So Nguyen To La: <span id="output2"></span></p>
+<p>Count: <span id="output3"></span></p>
+<script>
+    let numb = new Array() ;
+    let str = ""
+    let count = 0;
+    let m = parseInt(prompt("input m"));
+    let n = parseInt(prompt("input n"));
+    for (let i = 0; i < m ; i++){
+        numb[i] = new Array() ;
+        for (let j = 0; j < n; j++){
+            numb[i][j] = parseInt(prompt("input element"));
+            if (isPrime(numb[i][j])){
+               str += numb[i][j] + ", ";
+               count++;
+            }
+        }
+    }
+    document.getElementById("output1").innerHTML = numb;
+    document.getElementById("output2").innerHTML = str ;
+    document.getElementById("output3").innerHTML = count ;
+    function isPrime(num) {
+        if (num == 1){
+            return false ;
+        }
+        if (num == 2) {
+            return true;
+        }
+        for (let i = 2 ; i <= Math.sqrt(num); i++){
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true ;
+    }
+
+
+</script>
+</body>
+</html>

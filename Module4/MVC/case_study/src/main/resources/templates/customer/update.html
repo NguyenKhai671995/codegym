@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/customer/update}" method="post" th:object="${customer}">
+  <input th:field="*{id}" hidden><br>
+    Name: <input th:field="*{name}"><br>
+    <p style="color: red" th:errors="*{name}"></p><br>
+    dateOfBirth: <input th:field="*{dateOfBirth}" type="date"><br>
+    <p style="color: red" th:errors="*{dateOfBirth}"></p><br>
+<!--    gender: <input th:field="*{gender}" type="radio" value="1" th:text="Nam" th:checked="${customer.gender == true}">-->
+<!--             <input th:field="*{gender}" type="radio" value="0" th:text="Nu" th:checked="${customer.gender == false}"><br>-->
+<!--    <p style="color: red" th:errors="*{gender}"></p><br>-->
+    idCard: <input th:field="*{idCard}"><br>
+    <p style="color: red" th:errors="*{idCard}"></p><br>
+<!--    salary: <input th:field="*{salary}"><br>-->
+<!--    <p style="color: red" th:errors="*{salary}"></p><br>-->
+    phoneNumber: <input th:field="*{phoneNumber}"><br>
+    <p style="color: red" th:errors="*{phoneNumber}"></p><br>
+    email: <input th:field="*{email}"><br>
+    <p style="color: red" th:errors="*{email}"></p><br>
+    address: <input th:field="*{address}"><br>
+    <p style="color: red" th:errors="*{address}"></p><br>
+
+    customerType:   <select th:field="*{customerType}">
+                <option th:each="item:${list}" th:value="${item.id} " th:text="${item.name}">
+                </option>
+                </select>
+    <br>
+
+
+    <input th:field="*{status}" hidden >
+    <button type="submit">Submit</button>
+    <a href="/customer">
+        <button type="button">Back list</button>
+    </a>
+</form>
+</body>
+</html>

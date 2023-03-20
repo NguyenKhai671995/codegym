@@ -1,0 +1,55 @@
+<div class="table-responsive">
+  <table class="table table-primary">
+    <thead>
+    <tr>
+      <td>STT</td>
+      <th>customer</th>
+      <th>facility</th>
+      <th>employee</th>
+      <th>dateIn</th>
+      <th>dateOut</th>
+      <th>deposit</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let check of contracts;index as i">
+      <td>{{i + 1}}</td>
+      <td>{{check.customer}}</td>
+      <td>{{check.facility}}</td>
+      <td>{{check.employee}}</td>
+      <td>{{check.startDate}}</td>
+      <td>{{check.endDate}}</td>
+      <td>{{check.deposit}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(check)">
+          delete
+        </button>
+        <button type="button" class="btn btn-danger" [routerLink]="['/contract/contract-edit',check.id]">edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       do you want to delete ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteThis(contractDelete.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-success btn-lg mb-1" routerLink="/contract/contract-create">
+  Create
+</button>

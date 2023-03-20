@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrInt = new Array(7);
+    let str = "Chuoi so: ";
+    for (let i =0 ; i < arrInt.length; i++){
+        arrInt[i] = parseInt(prompt("input element:"));
+        str +=  arrInt[i] + ", " ;
+    }
+    document.write(str);
+    document.write("</br>")
+    for (let i = 0 ; i <arrInt.length; i++){
+        if(arrInt[i] > 10){
+            document.write(arrInt[i] + ", ");
+        }
+        else {
+            document.write("khong Co So Nao Lon Hon 10");
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

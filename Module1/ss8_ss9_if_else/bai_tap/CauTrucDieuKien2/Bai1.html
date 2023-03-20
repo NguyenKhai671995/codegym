@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Chuyển từ <sup>0</sup>C sang độ F. Nhập độ C = <input type="number" id="input1" name="input1"value=""></p>
+<p> Độ F là <span id="output1"></span></p>
+<script>
+    let a = document.getElementById("input1");
+    a.addEventListener("keyup", function () {
+        let c = parseInt(a.value) *  9/5 + 32;
+        document.getElementById("output1").innerText = c ;
+    });
+
+
+
+</script>
+</body>
+</html>

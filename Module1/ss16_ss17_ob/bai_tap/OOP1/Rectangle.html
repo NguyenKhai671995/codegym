@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas
+        id="canvasRectangle"
+        width="800"
+        height="250"
+        style="border: 1px solid orange"
+></canvas>
+<p>Perimeter : <span id="output1"></span></p>
+<p>Area: <span id="output2"></span></p>
+<input id="input1" type="button" value="newWidth" onclick="change()">
+<script>
+    class Rectangle {
+        constructor(canvas, position, width, height, color) {
+            this.canvas = canvas;
+            this.position = position;
+            this.width = width ;
+            this.height = height ;
+            this.color = color;
+        }
+        permit() {
+            return 2 * (this.width + this.height);
+        };
+        area() {
+            return this.width * this.height ;
+        };
+        draw() {
+            canvas.fillStyle = this.color;
+            canvas.fillRect(
+                this.position.x,
+                this.position.y,
+                this.width,
+                this.height,
+            );
+        };
+        setWidth() {
+            this.width = parseInt(prompt("newWidth"));
+        };
+        setHeight() {
+            this.height = parseInt(prompt("newHeight"));
+        };
+
+    }
+    let canvas = document.getElementById("canvasRectangle").getContext("2d");
+    let a = parseInt(prompt("width"));
+    let b = parseInt(prompt("height"));
+    let rect1 = new Rectangle(canvas, { x: 300, y: 20 }, a, b, "black");
+    rect1.draw();
+    let rect2 = new Rectangle(canvas, { x: 40, y: 40 }, a, b, "red");
+    rect2.draw();
+    document.getElementById("output1").innerHTML = rect1.permit();
+    document.getElementById("output2").innerHTML = rect1.area();
+    function change(){
+        rect1.setWidth();
+        rect1.setHeight();
+        rect1.draw();
+    }
+
+</script>
+</body>
+</html>

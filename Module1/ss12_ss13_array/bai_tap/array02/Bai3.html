@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [3,4,5,"str","name","rrr",4,1,2]
+
+    let countNumb = 0;
+    let countText = 0;
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        if (typeof array[i] == "number") {
+            countNumb++;
+        }
+    }
+    document.write("Number in Array is " + countNumb + "</br>");
+    for (i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        if (typeof array[i] =="string") {
+            countText++;
+        }
+    }
+    document.write("Text in Array is " + countText);
+
+
+</script>
+</body>
+</html>

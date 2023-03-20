@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let Bậc1	= 1.678;
+   let Bậc2	= 1.734;
+   let Bậc3	= 2.014;
+   let tienDien = 50000;
+   let dienTieuThu = parseFloat(prompt("Nhap so dien tieu thu"));
+   if (dienTieuThu>0 && dienTieuThu<50){
+       alert("dien tieu thu bac 1");
+       let total = dienTieuThu * Bậc1 * tienDien;
+       alert("tien dien phai tra: " + total);
+   }else if (dienTieuThu > 51 && dienTieuThu < 100){
+       alert("dien tieu thu bac 2");
+       let total = dienTieuThu * Bậc2 * tienDien;
+       alert("tien dien phai tra: " + total);
+   }else {
+       alert("dien tieu thu bac 3");
+       let total = dienTieuThu * Bậc3 * tienDien;
+       alert("tien dien phai tra: " + total);
+   }
+
+
+
+</script>
+</body>
+</html>

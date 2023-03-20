@@ -1,0 +1,43 @@
+<button class="btn btn-success btn-lg mb-1" routerLink="/facility/facility-update">create</button>
+<div class="row">
+  <div *ngFor="let facility of facilitys" class="col-lg-4">
+    <div class="card ms-5" style="width: 23rem;">
+      <img src="../../../../assets/img2/villasupergold.jpeg" class="card-img-top" alt="..."/>
+      <div class="card-body">
+        <h5 class="card-title">{{facility.nameService}}</h5>
+        <p class="card-text" *ngFor="let check of renTypes">
+          <span *ngIf="check.id == facility.rentType">kieu thue: {{check.name}}</span>
+        </p>
+        <p class="card-text" *ngFor="let check of facilityTypes ">
+          <span *ngIf="check.id == facility.facilityType">loai dich vu: {{check.name}} </span>
+        </p>
+
+        <button [routerLink]="['/facility/facility-detail',facility.id]" class="btn btn-warning " >Detail </button>
+        <a href="#" class="btn btn-warning ms-2" [routerLink]="['/facility/facility-edit',facility.id]">Edit</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="wantDeleteIt(facility)">
+          delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        delete this {{facilitySelect.nameService}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="deleteThis(facilitySelect.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+        table {
+            width: 50%;
+        }
+        th , td {
+            text-align: center;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <th><p>Amount</p></th>
+            <th><p>From Currency</p></th>
+            <th><p>To Currency</p></th>
+        </tr>
+        <tr>
+            <td ><input type="text" name="number" id="money"></td>
+            <td ><select id="from">
+                <option value="vnd">VietNam</option>
+                <option value="usd">Mỹ</option>
+            </select></td>
+            <td><select id="to">
+                <option value="vnd">VietNam</option>
+                <option value="usd">Mỹ</option>
+            </select></td>
+            <td><button type="button" value="Convert" onclick="change()">ConVert</button> </td>
+        </tr>
+
+    </table>
+    <p id="ketQua"></p>
+</form>
+<script>
+    function change() {
+        let money = document.getElementById("money").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result=0;
+        if (from=="vnd"&&to=='usd'){
+            result=money/23000;
+        }else if (from=="usd"&&to=='vnd'){
+            result = money*23000;
+        }else{
+            result = money;
+        }
+        document.getElementById("ketQua").innerText= result;
+    }
+</script>
+</body>
+</html>

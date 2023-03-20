@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap Luong <input type="number" id="inputLuong" oninput="inputLuong()"></p>
+<p>Thue cua ban la:  <span id="tax"></span></p>
+<p>Thu Nhap Sau Thue: <span id="luong"></span></p>
+<script>
+    function inputLuong() {
+        let f = document.getElementById("inputLuong").value ;
+        parseFloat(f);
+        if (f >= 15000000){
+            document.getElementById("tax").innerText = "20%";
+            document.getElementById("luong").innerHTML = f - (f * 0.2);
+        }else if(f >= 7000000){
+            document.getElementById("tax").innerText = "10%";
+            document.getElementById("luong").innerHTML = f - (f * 0.1);
+        }else {
+            document.getElementById("tax").innerText = "5%";
+            document.getElementById("luong").innerHTML = f - (f * 0.05);
+        }
+    }
+</script>
+</body>
+</html>

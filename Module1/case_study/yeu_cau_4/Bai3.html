@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Nhap chuoi 1");//aabcc
+    let newStr1 = str1.split("");
+    let str2 = prompt("Nhap chuoi 2");//adcaa
+    let newStr2 = str2.split("");
+    function commonCharacterCount(s1, s2){
+        let result = [];
+        for(let i = 0 ;i < s2.length; i++){
+            if(s1.indexOf(s2[i])>=0){
+                result.push(s2[i]);
+                s1.splice(s1.indexOf(s2[i]),1);
+            }
+        }
+        return result;
+    }
+    let ans = commonCharacterCount(newStr1,newStr2);
+    console.log(ans)
+    document.write("2 xâu s1 và s2 có" + ans.length + " kí tự chung")
+</script>
+</body>
+</html>

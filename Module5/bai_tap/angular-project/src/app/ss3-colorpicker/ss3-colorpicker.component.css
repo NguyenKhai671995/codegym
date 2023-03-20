@@ -1,0 +1,6 @@
+.result{
+  text-align: center;
+  color: red;
+  position: fixed;
+  height: 200px;
+}

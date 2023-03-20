@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrNum = new Array(8);
+    let str = "Chuoi so: ";
+    for (let i = 0; i < arrNum.length; i++){
+        arrNum[i] = parseInt(prompt("Input Number: "));
+        str += arrNum[i] + ", "
+    }
+    str += "</br>";
+    document.write(str);
+    let count = 0 ;
+    for(i = 0 ; i < arrNum.length ; i++){
+        if(arrNum[i] < 0){
+            count++;
+        }
+    }
+    document.write("So Nguyen Am Xuat Hien: "+ count);
+
+
+</script>
+</body>
+</html>

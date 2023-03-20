@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0 ;
+    for ( a = 1 ; a <= 100 ; a++){
+        /*if (a % 3 == 0 && a % 5 == 0 ){
+            document.write("FizzBuzz, ");
+        }else if (a % 3 == 0){
+            document.write("Fizz, ");
+        }else if (a % 5 == 0){
+            document.write("Buzz, ");
+        }else {
+            document.write(a + ", ");
+        }*/
+        let i = a % 3 == 0 && a % 5 == 0 ? "FizzBuzz, " : a % 3 == 0 ? "Fizz, " : a % 5 == 0 ? "Buzz, " : a + ", " ;
+        document.write(i);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Muc Thu Nhap: "));
+    if (a <= 6000000) {
+        document.write("Khong co thue <br>");
+    } else if (a> 6000000 && a < 9000000) {
+        document.write("thue la 2% <br>");
+        let total = a * 0.02;
+        document.write("Tien thue la: " + total);
+    } else if (a >= 9000000 && a <= 12000000){
+        document.write("thue la 3% <br>");
+        let total = a * 0.03;
+        document.write("Tien thue la: " + total);
+    }else {
+        document.write("thue la 4.5% <br>");
+        let total = a * 0.45;
+        document.write("Tien thue la: " + total);
+    }
+
+</script>
+</body>
+</html>

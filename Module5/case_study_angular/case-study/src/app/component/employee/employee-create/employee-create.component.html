@@ -1,0 +1,130 @@
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                <form class="mx-1 mx-md-4" [formGroup]="formUpdate" (ngSubmit)="saveCreate()">
+                  <input type="number" name="id" hidden formControlName="id">
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example1c" class="form-control" formControlName="name" name="name"/>
+                      <label class="form-label" for="form3Example1c">employeeName
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.name.touched) && formUpdate.controls.name.hasError('required') "> is something!!! input your name </span>
+                        <span style="color:red;"
+                              *ngIf="(formUpdate.controls.name.touched) && formUpdate.controls.name.hasError('minlength') "> should be longer 5 digits!!! input your name </span>
+                      </label> </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="date" id="form3Example2c" class="form-control" formControlName="birthday"
+                             name="birthday"/>
+                      <label class="form-label" for="form3Example1c">birthday</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example8c" class="form-control" formControlName="idCard"
+                             name="idCard"/>
+                      <label class="form-label" for="form3Example3c">idCard</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example7c" class="form-control" formControlName="salary"
+                             name="salary"/>
+                      <label class="form-label" for="form3Example3c">salary</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="form3Example4c" class="form-control" formControlName="phoneNumber" name="phoneNumber"/>
+                      <label class="form-label" for="form3Example4c">phone</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="email" id="form3Example3c" class="form-control" formControlName="email"
+                             name="email"/>
+                      <label class="form-label" for="form3Example3c">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="email" id="form3Example5c" class="form-control" formControlName="address"
+                             name="address"/>
+                      <label class="form-label" for="form3Example3c">address</label>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">positionEmployee</label>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                              formControlName="positionEmployee" name="positionEmployee">
+                        <option value="" selected>chose</option>
+                        <option *ngFor="let c of  positionEmployees" value="{{c.id}}">{{c.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">education</label>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                              formControlName="education" name="education">
+                        <option value="" selected>chose</option>
+                        <option *ngFor="let c of  educations" value="{{c.id}}">{{c.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+
+                    <div class="form-outline flex-fill mb-0">
+                      <label class="form-label" for="form3Example1c">division</label>
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                              formControlName="division" name="division">
+                        <option value="" selected>chose</option>
+                        <option *ngFor="let c of  divisions" value="{{c.id}}">{{c.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex btn-group justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button type="submit" class="btn btn-primary btn-lg" >Register
+                      <!--                      [disabled]="formUpdate.invalid-->
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg" (click)="buildForm()">Refresh</button>
+                    <button type="button" class="btn btn-primary btn-lg" routerLink="/customer/customer-list">BackList</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                     class="img-fluid" alt="Sample image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h2>Từ Điển Anh-Việt</h2>
+    <input type="text" placeholder="English" id="input1">
+    <input type="button" value="Translate" onclick="transEng()">&nbsp;
+    <span id="result"></span>
+</form>
+<script>
+    let engName = ["dictionary", "age", "name", "game", "top"] ;
+    let vietName = ["từ điển", "tuổi", "tên", "trò chơi", "bên trên"];
+    function transEng() {
+        let result = "";
+        let trans =  document.getElementById("input1").value;
+        let index = engName.indexOf(trans);
+        if (index != -1){
+            result = vietName[index];
+        } else {
+            result = "Not found...."
+        }
+        document.getElementById("result").innerText = result;
+    }
+</script>
+
+
+</body>
+</html>

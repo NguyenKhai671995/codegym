@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Mang 1: <span id="array1"></span></p>
+<p>Mang 2: <span id="array2"></span></p>
+<script>
+    let array = parseInt(prompt("inputArray: "));
+    let number1 = new Array(array);
+    for (let i = 0; i < array; i++) {
+        number1[i] = parseInt(prompt("Input Array1: "));
+    }
+    document.getElementById("array1").innerHTML = number1;
+    function sumArray(number1,number2 = []) {
+        for (let i = 0; i < array; i++) {
+            if ((i == 0)) {
+                number2.push(number1[0]);
+            } else {
+                number2.push(number1[i] + number2[i-1]);
+            }
+        }
+        return number2;
+    }
+    document.getElementById("array2").innerHTML = sumArray(number1);
+</script>
+</body>
+</html>

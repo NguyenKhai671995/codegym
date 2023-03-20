@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = new Array() ;
+    let m = parseInt(prompt("input m"));
+    let n = parseInt(prompt("input n"));
+    for (let i = 0; i < m ; i++){
+        numb[i] = new Array() ;
+        for (let j = 0; j < n; j++){
+            numb[i][j] = parseInt(prompt("input element"));
+        }
+    }
+    function minMax(numb) {
+        let min = 1000000;
+        let max = -77776660;
+        for(let i = 0; i < numb.length; i++){
+            for (let j = 0; j< numb[i].length; j++){
+                if (min > numb[i][j]){
+                    min = numb[i][j];
+                }else if (max < numb[i][j]){
+                    max = numb[i][j];
+                }
+            }
+        }
+        return alert("Max: " + max + "-" + "Min: " + min);
+    }
+    console.table(numb);
+    minMax(numb);
+</script>
+</body>
+</html>

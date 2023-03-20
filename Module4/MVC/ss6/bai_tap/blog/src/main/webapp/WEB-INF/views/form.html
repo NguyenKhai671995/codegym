@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{${link}}" method="post" th:object="${blog}">
+    <div th:if="${link == '/create'}">
+        <!--        id: <input th:field="*{id}" ><br>-->
+    </div>
+    <div th:if="${link == '/edit'}">
+        <!--        id: <input th:field="*{id}" readonly><br>-->
+    </div>
+    title: <input th:field="*{title}"><br>
+    content: <input th:field="*{content}"><br>
+    date: <input th:field="*{date}" type="date"><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

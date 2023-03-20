@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Number: <span><input id="input" oninput="inputNumber()"></span></p>
+<p>Array: <span id="output"></span></p>
+<script>
+
+    function inputNumber(){
+        let num = document.getElementById("input").value;
+        let str = "";
+        for (value of num) {
+            switch (value) {
+                case "0":
+                    str += "zero " ;
+                    break;
+                case "1":
+                    str += "one ";
+                    break;
+                case "2":
+                    str += "two ";
+                    break;
+                case "3":
+                    str += "three ";
+                    break;
+                case "4":
+                    str += "four ";
+                    break;
+                case "5":
+                    str += "five ";
+                    break;
+                case "6":
+                    str += "six ";
+                    break;
+                case "7":
+                    str += "seven ";
+                    break;
+                case "8":
+                    str += "eight ";
+                    break;
+                case "9":
+                    str += "nine ";
+                    break;
+            }
+        }
+        document.getElementById("output").innerHTML = str;
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+create database md4_ss8_blog;

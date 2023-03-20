@@ -1,0 +1,36 @@
+td {
+    padding-left: 20px;
+}
+
+select {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: orangered;
+}
+
+.imgStory {
+    width: 300px;
+    height: 500px;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+td{
+    text-align: center;
+    color: blue;
+}
+
+
+
+.box1 {
+    float: left;
+    clear:left;
+
+}
+.clear {
+    clear:both;
+}

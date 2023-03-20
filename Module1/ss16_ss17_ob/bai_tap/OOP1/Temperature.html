@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Celsius <input type="number" id="input1" oninput="inputCelsius()"></p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+<p>Kenvin: <span id="outputKenvin"></span></p>
+<script>
+    class Temperature{
+        constructor(celsius) {
+            this.celsius = Math.max(celsius, -273);
+        };
+
+        changeCtoF(){
+            return (9/5) * this.celsius + 32 ;
+        };
+        changeCtoK(){
+            return this.celsius + 273 ;
+        };
+    }
+    function inputCelsius(){
+        let value = parseInt(document.getElementById("input1").value);
+        let converter = new Temperature(value);
+        document.getElementById("outputFahrenheit").innerHTML = converter.changeCtoF();
+        document.getElementById("outputKenvin").innerHTML = converter.changeCtoK();
+    }
+
+
+</script>
+</body>
+</html>
